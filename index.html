@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Codeathon</title>
+    <!-- CSS Library -->
+    <link href="app/css/loadAll.css" rel="stylesheet">
+    <!-- JS Library -->
+    <!--[if lt IE 9]>
+        <script src="libs/js/modernizr.min.js"></script>
+    <![endif]-->
+    <script src="libs/js/jquery-1.11.3.min.js"></script>
+    <script src="libs/js/angular.min.js"></script>
+    <script src="libs/js/angular-animate.min.js"></script>
+    <script src="libs/js/angular-route.min.js"></script>
+    <script src="libs/js/underscore-min.js"></script>
+    <script src="libs/js/angular-idle.min.js"></script>
+    <script src="libs/js/ui-bootstrap-tpls-0.14.3.js"></script>
+    <script src="libs/js/bootstrap-datepicker.js"></script>    
+    <!-- Project Utills JS files -->
+    <script src="app/utils/appIndicator.js"></script>
+    <script src="app/utils/utils.js"></script>
+    <!-- JS files -->
+    <script src="app.js"></script>
+    <!-- factory JS files -->
+    <script src="app/factory/ajaxFactory.js"></script>   
+    <!-- controllers JS files -->
+    <script src="app/controllers/dashboardCtrl.js"></script>
+    <script src="app/controllers/loginCtrl.js"></script>
+    <script src="app/controllers/EventsCtrl.js"></script>
+    <script src="app/controllers/domainCtrl.js"></script>
+    <script src="app/controllers/technologyCtrl.js"></script>
+    <script src="app/controllers/roleCtrl.js"></script>  
+    <script src="app/controllers/hostCtrl.js"></script>
+    <script src="app/controllers/contestController.js"></script>          
+    <!-- constants JS files -->
+    <script src="app/constants/routers.js"></script>
+    <!-- Directives JS files -->
+    <script src="app/directives/headerMenuFooter.js"></script>
+    <script src="app/directives/popup.js"></script>
+
+</head>
+
+<body ng-app="codeathonapp" ng-controller="EventsCtrl">
+    <div class="themeadmin">
+        <!--  Header -->
+        <header-template></header-template>
+        <section class="contentarea">
+            <!--  Left Nav Menu  -->
+           <left-nav-menu-template></left-nav-menu-template>
+            <section class="content-rightsec">
+                <!--  Container -->
+                <aside class="w100per clearfix">
+                    <div ng-view></div>
+                </aside>
+                <div class="clear"></div>
+            </section>
+        </section>
+        <!--  Footer -->
+        <footer-template></footer-template>
+    </div>
+    <app-popup></app-popup>
+</body>
+
+</html>
